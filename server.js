@@ -27,6 +27,11 @@ app.use("/api/tests", (req, res) => {
     message: 'This is new feature change, a new route for tests'
   })
 });
+app.use("/api/secondtests", (req, res) => {
+  return res.status(200).json({
+    message: 'This is second new feature change, a new route for tests'
+  })
+});
 
 app.use(errorHandler);
 

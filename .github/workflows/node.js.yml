@@ -27,4 +27,4 @@ jobs:
     - run: npm ci
     - run: |
         touch .env
-        echo "${{ secrets.PROD_ENV_FILE }}" | base64 --decode > .env
+        echo "${{ secrets.PROD_ENV_FILE }}" | tr -d '\r' | base64 --decode > .env
